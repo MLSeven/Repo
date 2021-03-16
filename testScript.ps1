@@ -1,5 +1,6 @@
-write-host "This is testScript.ps1 from my Test Integration Repo"
-write-host ""
-$instance = "<%= instance %>"
+# Test Poerrshell
 
-$instance
+$proc =  get-process -Id $pid
+
+$json = $proc | convertto-json -depth 5
+$json
