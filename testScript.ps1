@@ -1,6 +1,3 @@
-# Test Poerrshell
-
-$proc =  get-process -Id $pid
-
-$json = $proc | convertto-json -depth 5
+# Test Powershell
+$json = netstat -a
 $json
