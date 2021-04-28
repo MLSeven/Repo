@@ -1,13 +1,14 @@
 # Standard PS header
 $ScriptEnv = [PSCustomObject]@{
-    Name = $MyInvocation.Command.Name;
+    Name = $MyInvocation.MyCommand.Name;
     Root = $PSScriptRoot;
     Path = $PSCommandPath;
     isWindows = $IsWindows;
     isLinux = $IsLinux;
     isMacOS = $IsMacOS;
     isCoreCLR = $ISCoreCLR;
-    isScriptBlock = ($MyInvocation.ScriptBlock -ne $null)
+    commandType = $MyInvocation.MyCommand.CommandType.ToString();
+    my=$MyInvocation.MyCommand;
 }
 
-$ScriptEnv | convertto-json
+$ScriptEnv | convertto-json -depth 5
