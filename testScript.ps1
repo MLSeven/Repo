@@ -1,7 +1,8 @@
 # Standard PS header (Updated)
 $ScriptEnv = [PSCustomObject]@{
     Name = $MyInvocation.MyCommand.Name;
-    Instance = "<%=instance.name%>"; 
+    Instance = "<%=instance.name%>";
+    server = "<%=server.name%>";
     Root = $PSScriptRoot;
     Path = $PSCommandPath;
     isWindows = $IsWindows;
