@@ -1,4 +1,4 @@
-# Standard PS header
+# Standard PS header (Updated)
 $ScriptEnv = [PSCustomObject]@{
     Name = $MyInvocation.MyCommand.Name;
     Root = $PSScriptRoot;
