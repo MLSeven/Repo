@@ -9,6 +9,7 @@ $ScriptEnv = [PSCustomObject]@{
     isLinux = $IsLinux;
     isMacOS = $IsMacOS;
     isCoreCLR = $ISCoreCLR;
+    pID = $PID;
     commandType = $MyInvocation.MyCommand.CommandType.ToString();
     my=$MyInvocation.MyCommand;
 }
