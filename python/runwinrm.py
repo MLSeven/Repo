@@ -6,7 +6,7 @@ server = morpheus['server']['fqdn']
 password = Cypher(morpheus=morpheus).get('secret/spotts')
 
 try:
-    output=run_winrm(server,"Test\spotts",password,"")
+    output=winrm_pwsh.run_winrm(server,"Test\spotts",password,"")
     print(output)
     sys.exit(0)
 except Exception as err:
