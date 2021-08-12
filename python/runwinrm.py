@@ -1,4 +1,4 @@
-from winrm-pwsh import run_winrm
+import winrm_pwsh
 from morpheuscypher import Cypher
 import sys
 
