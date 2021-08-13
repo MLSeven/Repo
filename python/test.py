@@ -2,7 +2,7 @@ import sys
 import os
 
 server = morpheus['server']['fqdn']
-password = Cypher(morpheus=morpheus).get('secret/spotts')
+#password = Cypher(morpheus=morpheus).get('secret/spotts')
 
 print(f"Python Test running in the server context {server}")
 for path in sys.path:
