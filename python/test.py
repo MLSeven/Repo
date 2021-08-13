@@ -23,6 +23,9 @@ for path in sys.path:
 for item, value in os.environ.items():
     print(f"Environment - {item}: {value}")
 
+print(f"abspath(__file__) = {os.path.abspath(__file__)}")
+print(f"os.path.dirname(os.path.abspath(__file__)) = {os.path.dirname(os.path.abspath(__file__))}")
+print(f"os.path.dirname(os.path.dirname(os.path.abspath(__file__))) {os.path.dirname(os.path.dirname(os.path.abspath(__file__)))}")
 BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #sys.path.append(BASE_PATH)
 print(f"Base Path {BASE_PATH}")
