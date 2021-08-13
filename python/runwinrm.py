@@ -3,7 +3,7 @@ import os
 
 #trap the situation where Morpheus is Launching the script via <stdin> and add cwd to path
 if (__file__ == "<stdin>"):
-    sys.path.append(os.getcwd())
+    sys.path.append(os.path.join(os.getcwd(),"python"))
 
 from winrmpwsh.winrm_pwsh import run_winrm
 from morpheuscypher import Cypher
