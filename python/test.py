@@ -23,6 +23,7 @@ for path in sys.path:
 for item, value in os.environ.items():
     print(f"Environment - {item}: {value}")
 
+print(f"os.getcwd() {os.getcwd()}")
 print(f"abspath(__file__) = {os.path.abspath(__file__)}")
 print(f"os.path.dirname(os.path.abspath(__file__)) = {os.path.dirname(os.path.abspath(__file__))}")
 print(f"os.path.dirname(os.path.dirname(os.path.abspath(__file__))) {os.path.dirname(os.path.dirname(os.path.abspath(__file__)))}")
