@@ -1,5 +1,11 @@
 import sys
 import os
+#trap the situation where Morpheus is Launching the script via <stdin> and add cwd to path
+if (__file__ == "<stdin>"):
+    sys.path.append(os.getcwd())
+
+# import any private modules
+from winrmpwsh import winrm_pwsh
 
 try:
     morpheus
@@ -15,7 +21,6 @@ else:
 
 print(f"Python Test running in the server context {server}")
 print(f"__file__ {__file__}")
-
 
 for path in sys.path:
     print(f"path = {path}")

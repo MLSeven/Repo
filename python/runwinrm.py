@@ -1,6 +1,17 @@
+import sys
+import os
+
+#trap the situation where Morpheus is Launching the script via <stdin> and add cwd to path
+if (__file__ == "<stdin>"):
+    sys.path.append(os.getcwd())
+
 from winrmpwsh.winrm_pwsh import run_winrm
 from morpheuscypher import Cypher
-import sys
+
+try:
+    morpheus
+except NameError:
+    morpheus = None
 
 server = morpheus['server']['fqdn']
 password = Cypher(morpheus=morpheus).get('secret/spotts')
