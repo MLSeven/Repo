@@ -6,6 +6,7 @@ try:
 except NameError:
     morpheus = None
 
+print("Morpheus Python Test: GIT Branch Python")
 if morpheus:
     print("Running Python in Morpheus from a Local source")
 else:
